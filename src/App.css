@@ -1,0 +1,182 @@
+
+.sidebar {
+  width: 200px;
+  background-color: #3d444c;
+  padding: 20px;
+  position: relative; /* Change to relative to avoid fixed positioning */
+  flex-shrink: 0; /* Ensure the sidebar doesn't shrink */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column; /* This allows the Navbar to be on top */
+}
+
+.navbar {
+  background-color: #22262b;
+  color: white;
+  padding: 20px;
+  flex-shrink: 0; /* Ensure the navbar doesn't shrink */
+}
+
+.content-area {
+  padding: 20px;
+  flex-grow: 1; /* Allow the content area to take the remaining space */
+  overflow-y: auto; /* Scroll if content overflows */
+}
+
+.calendar-container {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 100%;
+  background: white;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.react-calendar__tile--active {
+  background: #79baff;
+  color: rgb(0, 0, 0);
+}
+
+.react-calendar__tile--now {
+  background: #a0cdfd;
+}
+
+.holiday {
+  background-color: #fde671;
+  border-radius: 50%;
+  padding: 2px;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.time-buttons {
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh; /* Full height to align with the sidebar */
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow-y: auto; /* Allows scrolling if content overflows */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* Ensures the table layout is fixed */
+}
+
+.table th, .table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table td {
+  word-wrap: break-word; /* Ensures long text wraps within the cell */
+}
+
+.table th:nth-child(1), .table td:nth-child(1) {
+  width: 30%; /* Adjust the width as needed */
+}
+
+.table th:nth-child(2), .table td:nth-child(2) {
+  width: 35%; /* Adjust the width as needed */
+}
+
+.table th:nth-child(3), .table td:nth-child(3) {
+  width: 35%; /* Adjust the width as needed */
+}
+
+.time-buttons {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+  margin: 20px 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.time-in-btn {
+  background-color: #64ad75;
+  color: white;
+}
+
+.time-in-btn:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+.time-out-btn {
+  background-color: #be5f69;
+  color: white;
+}
+
+.time-out-btn:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
